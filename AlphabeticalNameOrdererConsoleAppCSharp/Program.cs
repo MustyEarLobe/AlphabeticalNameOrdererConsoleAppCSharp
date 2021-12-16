@@ -24,6 +24,8 @@ namespace AlphabeticalNameOrdererConsoleAppCSharp
                 Console.WriteLine(ex.Message);
                 Console.ForegroundColor = ConsoleColor.White;
             }
+
+            Console.ReadKey();
         }
 
         static void SortPrintandSave()

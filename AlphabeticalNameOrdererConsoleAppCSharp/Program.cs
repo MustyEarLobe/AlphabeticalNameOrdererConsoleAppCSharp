@@ -33,7 +33,7 @@ namespace AlphabeticalNameOrdererConsoleAppCSharp
             Console.WriteLine("sort-names " + fileLocation + "/" + fileName);
             Inputs.CheckForInvalidInputs();
 
-            var sortedNames = Inputs.OrderString();
+            var sortedNames = Inputs.OrderNameStrings();
 
             PrintNamesArray(sortedNames);
 

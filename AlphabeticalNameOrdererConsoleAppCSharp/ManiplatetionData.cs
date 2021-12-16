@@ -24,10 +24,10 @@ namespace DataManiplator
             }
         }
 
-        public static List<string> OrderString(this List<string> StringArray)
+        public static List<string> OrderNameStrings(this List<string> nameStringArray)
         {
-            Array.Sort(StringArray.ToArray(), (a, b) => a.CompareTo(b));
-            return StringArray;
+            Array.Sort(nameStringArray.ToArray(), (a, b) => a.CompareTo(b));
+            return nameStringArray;
         }
     }
 }

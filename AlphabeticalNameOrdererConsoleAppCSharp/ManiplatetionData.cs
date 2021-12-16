@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Text.RegularExpressions;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 
-namespace DataManiplator
+namespace AlphabeticalNameOrdererConsoleAppCSharp
 {
     public static class ManiplatetionData
     {
@@ -24,10 +25,10 @@ namespace DataManiplator
             }
         }
 
-        public static List<string> OrderString(this List<string> StringArray)
+        public static List<string> OrderNameStrings(this List<string> StringList)
         {
-            Array.Sort(StringArray.ToArray(), (a, b) => a.CompareTo(b));
-            return StringArray;
+            var sortedList = StringList.OrderBy(x => x).ToList();
+            return sortedList;
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using DataManiplator;
+using AlphabeticalNameOrdererConsoleAppCSharp;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -33,7 +33,7 @@ namespace AlphabeticalNameOrdererConsoleAppCSharp
             Console.WriteLine("sort-names " + fileLocation + "/" + fileName);
             Inputs.CheckForInvalidInputs();
 
-            var sortedNames = Inputs.OrderString();
+            var sortedNames = Inputs.OrderNameStrings();
 
             PrintNamesArray(sortedNames);
 

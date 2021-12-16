@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DataManiplator
 {
@@ -26,8 +27,8 @@ namespace DataManiplator
 
         public static List<string> OrderNameStrings(this List<string> nameStringArray)
         {
-            Array.Sort(nameStringArray.ToArray(), (a, b) => a.CompareTo(b));
-            return nameStringArray;
+            var sortedList = nameStringArray.OrderBy(x => x).ToList();
+            return sortedList;
         }
     }
 }

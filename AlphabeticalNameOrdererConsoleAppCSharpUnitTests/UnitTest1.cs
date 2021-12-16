@@ -2,6 +2,7 @@ using AlphabeticalNameOrdererConsoleAppCSharp;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 
 namespace AlphabeticalNameOrdererConsoleAppCSharpUnitTest
@@ -58,6 +59,21 @@ namespace AlphabeticalNameOrdererConsoleAppCSharpUnitTest
             List<string> sortedNames = goodNamesList.OrderNameStrings();
 
             Assert.AreEqual(correctOrderNamesList, sortedNames);
+        }
+
+        [Test]
+        public void CheckSaveToFile()
+        {
+
+            string fileLocation = "C:";
+            string fileName = "names.txt";
+            string expectedReturnMsg = "created names.txt";
+
+            string returnmsg = goodNamesList.SaveNamesList(fileLocation, fileName);
+            string[] namesArray = File.ReadAllLines(fileLocation + "/" + fileName); ;
+
+            Assert.AreEqual(expectedReturnMsg, returnmsg);
+            Assert.AreEqual(goodNamesList, namesArray);
         }
     }
 }
